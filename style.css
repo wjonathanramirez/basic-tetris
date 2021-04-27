@@ -8,6 +8,8 @@
     display: flex;
     flex-wrap: wrap;
     background-color: yellow;
+    border-style: solid;
+    border-color: black;
 }
 
 .grid div {
@@ -17,6 +19,7 @@
 
 .tetromino {
     background-color: blue;
+    border: 1em;
 }
 
 .mini-grid {
@@ -26,9 +29,16 @@
     display: flex;
     flex-wrap: wrap;
     background-color: yellow;
+    border-style: solid;
+    border-color: black;
 }
 
 .mini-grid div {
     height: 20px;
     width: 20px
+}
+
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
 }
