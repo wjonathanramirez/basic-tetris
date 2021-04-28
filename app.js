@@ -191,11 +191,12 @@ document.addEventListener('DOMContentLoaded', () => {
     startBtn.addEventListener('click', () => {
         if (timerId) {
             clearInterval(timerId)
+            console.log("Timer id exists")
             timerId = null
         } else {
             draw()
             timerId = setInterval(moveDown, 1000)
-            nextRandom = Math.floor(Math.random()*theTetrominoes.length)
+            console.log("timer id is wiped out");
             displayShape()
         }
     })
@@ -222,9 +223,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // game over
     function gameOver() {
-        if(current.some(index => square[currentPosition + index].classList.contains('taken'))) {
+        if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
             scoreDisplay.innerHTML = 'end'
             clearInterval(timerId)
+            timerId = null;
         }
     }
 
